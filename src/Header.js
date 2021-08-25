@@ -1,10 +1,10 @@
-import React from 'react'
-import logo from './images/logo.png';
+import React from 'react';
+import mega_logo from './images/mega_logo.PNG';
 
 function Header() {
     return (
-        <header id="pradzia">
-            <img alt="" src={logo} width="200"/>
+        <header id="start">
+            <img alt="" src={mega_logo} width="200"/>
         </header>
     )
 }

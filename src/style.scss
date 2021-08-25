@@ -27,6 +27,9 @@ $lighterBlue: #03405A;
 $lightestBlue: #0C729E;
 $iconsBg: #07364A;
 
+$lightOrange: #D09E53;
+$darkOrange: #B96400;
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -87,7 +90,7 @@ h2 {
     margin: 15px;
     cursor: pointer;
     z-index: 4;
-    background: #013553;
+    background: $darkOrange;
     padding: 7px;
     right: 0px;
     border: 1px solid white;
@@ -98,6 +101,53 @@ h2 {
 
     @include tablet {
         display: block;
+    }
+}
+
+.btn-group {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    color: white;
+
+    @include phone {
+        margin: 15px;
+        left: 0;
+        // width: 110px;
+        display: inline-block;
+        // max-width: 120px;
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .language-button {
+        display: flex;
+        align-items: center;
+        background: $lightOrange;
+        padding: 12px;
+        cursor: pointer;
+    }
+
+    img {
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .language-menu {
+        // position: absolute;
+        // top: 20px;
+        padding: 10px;
+        background: $lightOrange;
+        cursor: pointer;
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -139,7 +189,7 @@ aside {
     width: 100px;
     height: 100vh;
     position: fixed;
-    background: $darkBlue;
+    background: #D09E53;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,7 +241,7 @@ aside {
                 transition: 0.3s ease;
 
                 &:hover {
-                    background: $lightestBlue;
+                    background: $darkOrange;
                 }
 
                 .menu-icon {
@@ -208,7 +258,7 @@ aside {
 
 .main {
     &__container {
-        background: linear-gradient(to right, $lighterBlue, $darkBlue);
+        background: white;
         margin-left: 100px;
 
         @include tablet {
@@ -220,7 +270,8 @@ aside {
             padding: 30px 0px;
 
             @include phone {
-                padding: 15px 0px;
+                padding-top: 100px;
+                // margin-top: 50px;
             }
         }
 
@@ -228,6 +279,7 @@ aside {
 
             &__col-2 {
                 width: 100%;
+                margin-top: 50px;
 
                 .logo-separator {
                     @include logo-separator();
@@ -362,7 +414,9 @@ aside {
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
+                flex-direction: row-reverse;
                 margin-top: -35px;
+                color: black;
 
                 @include tablet {
                     width: 90%;
@@ -371,11 +425,12 @@ aside {
                 @include phone {
                     flex-direction: column-reverse;
                     align-items: center;
+                    width: 90%;
                 }
 
                 .left {
                     width: 50%;
-                    padding-right: 20px;
+                    padding-left: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -409,7 +464,7 @@ aside {
                             border: 1px solid transparent;
                             box-sizing: border-box;
                             font-size: 22px;
-                            background: #0C709B;
+                            background: $lightOrange;
                             padding: 10px;
                             cursor: pointer;
                             transition: 0.3s ease;
@@ -425,15 +480,16 @@ aside {
                             }
 
                             &:hover {
-                                background: transparent;
-                                border: 1px solid #0C709B;
+                                background: $darkOrange;
+                                border: 1px solid $lightOrange;
                             }
                         }
 
                         .btn-secondary {
+                            background: $darkOrange;
                             padding: 10px;
                             font-size: 22px;
-                            border: 1px solid #0C709B;
+                            border: 1px solid $lightOrange;
                             margin-left: 30px;
                             cursor: pointer;
                             transition: 0.3s ease;
@@ -450,7 +506,7 @@ aside {
                             }
 
                             &:hover {
-                                background: #0C709B;
+                                background: $lightOrange;
                             }
                         }
                     }
@@ -943,11 +999,113 @@ aside {
                 }
             }
 
+            &__advantages {
+                color: black;
+                margin-top: 100px;
+            }
+
+            &__product {
+                color: black;
+                margin-top: 100px;
+            }
+
+            &__timeline {
+                .row {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    
+                    @include phone {
+                        flex-direction: column;
+                    }
+
+                    .item {
+                        width: 50%;
+                        text-align: center;
+
+                        @include phone {
+                            width: 100%;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+
+                        @include phone {
+                            flex-direction: column;
+                        }
+                    }
+
+                    .padding {
+                        padding: 20px;
+                    }
+                }
+            }
+
+            &__gallery {
+                color: black;
+
+                .gallery {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    @include phone {
+                        display: block;
+                    }
+
+                    img {
+                        height: 200px;
+                        margin: 5px;
+
+                        @include phone {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            &__wrap {
+                width: 80%;
+                margin: 0 auto;
+
+                @include phone {
+                    width: 90%;
+                }
+            }
+
+            &__list {
+                background: $lightOrange;
+                padding: 20px;
+                color: white;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 10px;
+                        width: 30px;
+                    }
+                }
+            }
+
             &__contact {
                 margin-top: 50px;
 
                 .logo-separator {
                     @include logo-separator();
+                }
+
+                .text-center {
+                    color: black;
                 }
 
                 form {
@@ -965,13 +1123,13 @@ aside {
                         align-items: center;
                         justify-content: center;
                         width: 33.33%;
-                        background: $darkBlue;
+                        background: $darkOrange;
                         padding: 20px;
                         margin-right: 20px;
 
                         @include phone {
                             width: 100%;
-                            background: transparent;
+                            // background: transparent;
                             flex-direction: column;
                             justify-content: space-between;
                             margin-right: 0px;
@@ -998,6 +1156,7 @@ aside {
 
                     .form-block {
                         width: 33.33%;
+                        color: black;
 
                         @include phone {
                             width: 100%;
@@ -1009,7 +1168,7 @@ aside {
                             input[type="text"] {
                                 width: 100%;
                                 padding: 10px;
-                                background: $lightestBlue;
+                                background: $lightOrange;
                                 color: white;
                                 font-size: 20px;
                                 border: none;
@@ -1020,13 +1179,13 @@ aside {
 
                                 &:focus {
                                     outline: none;
-                                    background: rgb(36, 166, 241);
+                                    background: $darkOrange;
                                 }
                             }
 
                             textarea {
                                 width: 100%;
-                                background: $lightestBlue;
+                                background: $lightOrange;
                                 border: none;
                                 color: white;
                                 font-size: 20px;
@@ -1043,8 +1202,8 @@ aside {
                             font-size: 16px;
                             font-weight: 500;
                             color: white;
-                            background: $darkBlue;
-                            border: 2px solid $lightestBlue;
+                            background: $darkOrange;
+                            border: 2px solid $lightOrange;
                             padding: 10px;
                             cursor: pointer;
                             -webkit-appearance: none;
@@ -1073,7 +1232,7 @@ aside {
 
         .footer {
             padding: 20px;
-            background: $darkBlue;
+            background: black;
             margin-top: 50px;
             text-align: center;
 

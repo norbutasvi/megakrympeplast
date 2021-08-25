@@ -62,7 +62,7 @@ h2 {
   margin: 15px;
   cursor: pointer;
   z-index: 4;
-  background: #013553;
+  background: #B96400;
   padding: 7px;
   right: 0px;
   border: 1px solid white;
@@ -78,6 +78,59 @@ h2 {
   .nav-button {
     display: block;
   }
+}
+
+.btn-group {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-group {
+    margin: 15px;
+    left: 0;
+    display: inline-block;
+  }
+}
+
+.btn-group button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-group .language-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #D09E53;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.btn-group img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+.btn-group .language-menu {
+  padding: 10px;
+  background: #D09E53;
+  cursor: pointer;
+}
+
+.btn-group .language-menu .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .active {
@@ -122,7 +175,7 @@ aside {
   width: 100px;
   height: 100vh;
   position: fixed;
-  background: #042939;
+  background: #D09E53;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +257,7 @@ aside nav ul li {
 }
 
 aside nav ul li:hover {
-  background: #0C729E;
+  background: #B96400;
 }
 
 aside nav ul li .menu-icon {
@@ -216,8 +269,7 @@ aside nav ul li .title {
 }
 
 .main__container {
-  background: -webkit-gradient(linear, left top, right top, from(#03405A), to(#042939));
-  background: linear-gradient(to right, #03405A, #042939);
+  background: white;
   margin-left: 100px;
 }
 
@@ -234,12 +286,13 @@ aside nav ul li .title {
 
 @media only screen and (max-width: 600px) {
   .main__container header {
-    padding: 15px 0px;
+    padding-top: 100px;
   }
 }
 
 .main__container .section__col-2 {
   width: 100%;
+  margin-top: 50px;
 }
 
 .main__container .section__col-2 .logo-separator {
@@ -423,7 +476,12 @@ aside nav ul li .title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin-top: -35px;
+  color: black;
 }
 
 @media only screen and (max-width: 1040px) {
@@ -441,12 +499,13 @@ aside nav ul li .title {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 90%;
   }
 }
 
 .main__container .section__wrapper .left {
   width: 50%;
-  padding-right: 20px;
+  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +563,7 @@ aside nav ul li .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 22px;
-  background: #0C709B;
+  background: #D09E53;
   padding: 10px;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
@@ -526,14 +585,15 @@ aside nav ul li .title {
 }
 
 .main__container .section__wrapper .left .buttons .btn-primary:hover {
-  background: transparent;
-  border: 1px solid #0C709B;
+  background: #B96400;
+  border: 1px solid #D09E53;
 }
 
 .main__container .section__wrapper .left .buttons .btn-secondary {
+  background: #B96400;
   padding: 10px;
   font-size: 22px;
-  border: 1px solid #0C709B;
+  border: 1px solid #D09E53;
   margin-left: 30px;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
@@ -556,7 +616,7 @@ aside nav ul li .title {
 }
 
 .main__container .section__wrapper .left .buttons .btn-secondary:hover {
-  background: #0C709B;
+  background: #D09E53;
 }
 
 .main__container .section__wrapper .right {
@@ -1156,6 +1216,136 @@ aside nav ul li .title {
   }
 }
 
+.main__container .section__advantages {
+  color: black;
+  margin-top: 100px;
+}
+
+.main__container .section__product {
+  color: black;
+  margin-top: 100px;
+}
+
+.main__container .section__timeline .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__timeline .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main__container .section__timeline .row .item {
+  width: 50%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__timeline .row .item {
+    width: 100%;
+  }
+}
+
+.main__container .section__timeline .row .item img {
+  width: 100%;
+}
+
+.main__container .section__timeline .row:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__timeline .row:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main__container .section__timeline .row .padding {
+  padding: 20px;
+}
+
+.main__container .section__gallery {
+  color: black;
+}
+
+.main__container .section__gallery .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__gallery .gallery {
+    display: block;
+  }
+}
+
+.main__container .section__gallery .gallery img {
+  height: 200px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__gallery .gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main__container .section__wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container .section__wrap {
+    width: 90%;
+  }
+}
+
+.main__container .section__list {
+  background: #D09E53;
+  padding: 20px;
+  color: white;
+}
+
+.main__container .section__list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.main__container .section__list .item img {
+  margin-right: 10px;
+  width: 30px;
+}
+
 .main__container .section__contact {
   margin-top: 50px;
 }
@@ -1165,6 +1355,10 @@ aside nav ul li .title {
   height: 70px;
   background: -webkit-gradient(linear, left top, right top, from(#0C729E), to(#013553));
   background: linear-gradient(to right, #0C729E, #013553);
+}
+
+.main__container .section__contact .text-center {
+  color: black;
 }
 
 .main__container .section__contact form {
@@ -1203,7 +1397,7 @@ aside nav ul li .title {
       -ms-flex-pack: center;
           justify-content: center;
   width: 33.33%;
-  background: #042939;
+  background: #B96400;
   padding: 20px;
   margin-right: 20px;
 }
@@ -1211,7 +1405,6 @@ aside nav ul li .title {
 @media only screen and (max-width: 600px) {
   .main__container .section__contact form .info-box {
     width: 100%;
-    background: transparent;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1254,6 +1447,7 @@ aside nav ul li .title {
 
 .main__container .section__contact form .form-block {
   width: 33.33%;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1269,7 +1463,7 @@ aside nav ul li .title {
 .main__container .section__contact form .form-block .input-item input[type="text"] {
   width: 100%;
   padding: 10px;
-  background: #0C729E;
+  background: #D09E53;
   color: white;
   font-size: 20px;
   border: none;
@@ -1283,12 +1477,12 @@ aside nav ul li .title {
 
 .main__container .section__contact form .form-block .input-item input[type="text"]:focus {
   outline: none;
-  background: #24a6f1;
+  background: #B96400;
 }
 
 .main__container .section__contact form .form-block .input-item textarea {
   width: 100%;
-  background: #0C729E;
+  background: #D09E53;
   border: none;
   color: white;
   font-size: 20px;
@@ -1304,8 +1498,8 @@ aside nav ul li .title {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  background: #042939;
-  border: 2px solid #0C729E;
+  background: #B96400;
+  border: 2px solid #D09E53;
   padding: 10px;
   cursor: pointer;
   -webkit-appearance: none;
@@ -1339,7 +1533,7 @@ aside nav ul li .title {
 
 .main__container .footer {
   padding: 20px;
-  background: #042939;
+  background: black;
   margin-top: 50px;
   text-align: center;
 }

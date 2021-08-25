@@ -4,17 +4,17 @@ window.addEventListener('load', () => {
     // SECTIONS
     const sections = [];
     sections.push(document.querySelector('.section__col-2'));
-    sections.push(document.querySelector('.section__testimonials'));
-    sections.push(document.querySelector('.section__portfolio'));
-    sections.push(document.querySelector('.section__process'));
+    sections.push(document.querySelector('.section__product'));
+    sections.push(document.querySelector('.section__gallery'));
     sections.push(document.querySelector('.section__contact'));
 
     // BUTTONS
     const buttons = [];
     buttons.push(document.querySelector('#home'));
-    buttons.push(document.querySelector('#clients'));
-    buttons.push(document.querySelector('#portfolio'));
-    buttons.push(document.querySelector('#process'));
+    buttons.push(document.querySelector('#product'));
+    buttons.push(document.querySelector('#gallery'));
+    // buttons.push(document.querySelector('#portfolio'));
+    // buttons.push(document.querySelector('#process'));
     buttons.push(document.querySelector('#contact'));
 
 
@@ -36,23 +36,19 @@ window.addEventListener('load', () => {
                 resetColors();
                 if (entry.target.classList.contains('section__col-2')) {
                     const home = document.querySelector('#home');
-                    home.style.background = '#0C729E';
+                    home.style.background = '#B96400';
                 }
-                if (entry.target.classList.contains('section__testimonials')) {
-                    const home = document.querySelector('#clients');
-                    home.style.background = '#0C729E';
+                if (entry.target.classList.contains('section__product')) {
+                    const home = document.querySelector('#product');
+                    home.style.background = '#B96400';
                 }
-                if (entry.target.classList.contains('section__portfolio')) {
-                    const home = document.querySelector('#portfolio');
-                    home.style.background = '#0C729E';
-                }
-                if (entry.target.classList.contains('section__process')) {
-                    const home = document.querySelector('#process');
-                    home.style.background = '#0C729E';
+                if (entry.target.classList.contains('section__gallery')) {
+                    const home = document.querySelector('#gallery');
+                    home.style.background = '#B96400';
                 }
                 if (entry.target.classList.contains('section__contact')) {
                     const home = document.querySelector('#contact');
-                    home.style.background = '#0C729E';
+                    home.style.background = '#B96400';
                 }
                 
             } else {
@@ -60,16 +56,12 @@ window.addEventListener('load', () => {
                     const home = document.querySelector('#home');
                     home.style.background = 'transparent';
                 }
-                if (entry.target.classList.contains('section__testimonials')) {
-                    const home = document.querySelector('#clients');
+                if (entry.target.classList.contains('section__product')) {
+                    const home = document.querySelector('#product');
                     home.style.background = 'transparent';
                 }
-                if (entry.target.classList.contains('section__portfolio')) {
-                    const home = document.querySelector('#portfolio');
-                    home.style.background = 'transparent';
-                }
-                if (entry.target.classList.contains('section__process')) {
-                    const home = document.querySelector('#process');
+                if (entry.target.classList.contains('section__gallery')) {
+                    const home = document.querySelector('#gallery');
                     home.style.background = 'transparent';
                 }
                 if (entry.target.classList.contains('section__contact')) {

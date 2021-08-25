@@ -1,26 +1,49 @@
 import React from 'react'
-import logo from './images/logo.png';
 import homePage from './images/home-page.png';
-import portfolio from './images/portfolio.png';
-import workStation from './images/work-station.png';
 import letter from './images/letter.png';
-import customers from './images/customers.svg';
+import box from './images/box.png';
+import gallery from './images/gallery.png';
+import translate from './i18n/translate';
 
 function Aside() {
     return (
             <aside>
-                <div class="logo"><img alt="" src={logo} /></div>
+                {/* <div class="logo"><img alt="" src={logo} /></div> */}
                 <nav>
                     <ul>
-                        <a href="#pradzia">
+                        <a href="#start">
                         <li id="home">
                             <img alt="" src={homePage} class="menu-icon" />
                             <div class="title">
-                                PRADŽIA
+                                {translate('home')}
                             </div>
                         </li>
                         </a>
-                        <a href="#klientai">
+                        <a href="#produkt">
+                        <li id="product">
+                            <img alt="" src={box} class="menu-icon" />
+                            <div class="title">
+                            {translate('product')}
+                            </div>
+                        </li>
+                        </a>
+                        <a href="#galleri">
+                        <li id="gallery">
+                            <img alt="" src={gallery} class="menu-icon" />
+                            <div class="title">
+                            {translate('gallery')}
+                            </div>
+                        </li>
+                        </a>
+                        <a href="#contacts">
+                        <li id="contact">
+                            <img alt="" src={letter} class="menu-icon" />
+                            <div class="title">
+                            {translate('contact')}
+                            </div>
+                        </li>
+                        </a>
+                        {/* <a href="#klientai">
                         <li id="clients">
                             <img alt="" src={customers} class="menu-icon" />
                             <div class="title">
@@ -51,7 +74,7 @@ function Aside() {
                                 KONTAKTAI
                             </div>
                         </li>
-                        </a>
+                        </a> */}
                     </ul>
                 </nav>
             </aside>

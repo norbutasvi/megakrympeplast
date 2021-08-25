@@ -4,6 +4,7 @@ import phone from './images/phone.png';
 import letter from './images/letter.png';
 import loader from './images/loader.gif';
 import {getBaseUrl} from './environment';
+import translate from './i18n/translate';
 
 function Form() {
 
@@ -29,19 +30,19 @@ function Form() {
         let messageError = ''
 
         if (formData.name.length < 1) {
-            nameError = 'Įveskite vardą';
+            nameError = 'Enter name';
         }
 
         if (formData.phone.length < 1) {
-            phoneError = 'Įveskite telefono numerį';
+            phoneError = 'Enter phone number';
         }
 
         if (formData.email.length < 1 || !formData.email.includes('@')) {
-            emailError = 'Įveskite tinkamą el. pašto adresą'
+            emailError = 'Enter valid email address'
         }
 
         if (formData.message.length < 1) {
-            messageError = 'Užpildykite žinutės laukelį'
+            messageError = 'Enter message text'
         }
 
         if (nameError || phoneError || emailError || messageError) {
@@ -98,8 +99,8 @@ function Form() {
                         <img alt="" src={phone} width="20px" />
                         <div class="text">
                             <p>
-                                <strong>TEL. NUMERIS</strong><br />
-                                +37063631839
+                                <strong>{translate('phone')}</strong><br />
+                                93944733
                             </p>
                         </div>
                     </div>
@@ -108,39 +109,39 @@ function Form() {
                     <img alt="" src={letter} width="20px" />
                     <div class="text">
                         <p>
-                            <strong>EL. PAŠTO ADRESAS</strong><br />
-                            siaurespuslapiai@gmail.com
+                            <strong>{translate('email')}</strong><br />
+                            mega.krympeplast@gmail.com
                         </p>
                     </div>
                 </div>
             </div>
             <div class="form-block left">
                 <div class="input-item">
-                    <label>Vardas</label><br />
+                    <label>{translate('name')}</label><br />
                     <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value})} />
                     <div style={{'color': 'red'}}>{formData.nameError}</div>
                 </div>
                 <div class="input-item">
-                    <label>Telefonas</label><br />
+                    <label>{translate('phone_number')}</label><br />
                     <input type="text" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value})}/>
                     <div style={{'color': 'red'}}>{formData.phoneError}</div>
                 </div>
                 <div class="input-item">
-                    <label>Jūsų el. pašto adresas</label><br />
+                    <label>{translate('email_address')}</label><br />
                     <input type="text" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value})}/>
                     <div style={{'color': 'red'}}>{formData.emailError}</div>
                 </div>
             </div>
             <div class="form-block right">
                 <div class="input-item">
-                    <label>Žinutė</label><br />
+                    <label>{translate('message')}</label><br />
                     <textarea id="message" value={formData.message} selectionDirection="forward" selectionStart="0" selectionEnd="0" onChange={(e) => setFormData({ ...formData, message: e.target.value})}></textarea>
                     <div style={{'color': 'red'}}>{formData.messageError}</div>
                 </div>
                 <div class="submit-button">
-                    <input type="submit" disabled={isSending} onClick={handleSubmit} value="SIŲSTI" />
+                    <input type="submit" disabled={isSending} onClick={handleSubmit} value='SEND' />
                     {isSending && 
-                        <div style={{'text-align':'center'}}><span style={{'margin-right':'10px'}}>SIUNČIAMA</span><img alt="" src={loader} width="50px" /></div>
+                        <div style={{'text-align':'center'}}><span style={{'margin-right':'10px'}}>{translate('SENDING')}</span><img alt="" src={loader} width="50px" /></div>
                     }
                 </div>
             </div>
