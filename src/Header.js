@@ -1,5 +1,5 @@
 import React from 'react';
-import mega_logo from './images/mega_logo.PNG';
+import mega_logo from './images/mega_logo3.PNG';
 
 function Header() {
     return (

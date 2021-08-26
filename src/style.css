@@ -1,7 +1,24 @@
+@media only screen and (max-width: 600px) {
+  h1, h2 {
+    font-size: 120% !important;
+  }
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  video {
+    width: 100%;
+  }
 }
 
 body {
@@ -1310,6 +1327,7 @@ aside nav ul li .title {
   .main__container .section__gallery .gallery img {
     width: 100%;
     height: auto;
+    margin: 0;
   }
 }
 

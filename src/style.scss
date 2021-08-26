@@ -30,9 +30,24 @@ $iconsBg: #07364A;
 $lightOrange: #D09E53;
 $darkOrange: #B96400;
 
+h1, h2 {
+    @include phone {
+        font-size: 120% !important;
+    }
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+video {
+    display:block; 
+    margin: 0 auto;
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 body {
@@ -1065,6 +1080,7 @@ aside {
                         @include phone {
                             width: 100%;
                             height: auto;
+                            margin: 0;
                         }
                     }
                 }

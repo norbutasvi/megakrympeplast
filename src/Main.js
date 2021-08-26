@@ -16,12 +16,12 @@ import five from './images/five.PNG';
 import six from './images/six.PNG';
 import galleryOne from './images/gallery1.jpg';
 import galleryTwo from './images/gallery2.jpg';
-import galleryThree from './images/gallery3.jpg';
 import galleryFour from './images/gallery4.jpg';
 import galleryFive from './images/gallery5.jpg';
 import gallerySix from './images/gallery6.jpg';
 import gallerySeven from './images/gallery7.jpg';
 import galleryEight from './images/gallery8.jpg';
+import video from './images/video.mp4';
 // import partners from './images/partners.jpg';
 
 function Main() {
@@ -119,7 +119,6 @@ function Main() {
                     <div className="gallery" id="darbai">
                         <a href={galleryOne}><img src={galleryOne} alt="" title=""/></a>
                         <a href={galleryTwo}><img src={galleryTwo} alt="" title=""/></a>
-                        <a href={galleryThree}><img src={galleryThree} alt="" title=""/></a>
                         <a href={galleryFour}><img src={galleryFour} alt="" title=""/></a>
                         <a href={galleryFive}><img src={galleryFive} alt="" title=""/></a>
                         <a href={gallerySix}><img src={gallerySix} alt="" title=""/></a>
@@ -127,6 +126,9 @@ function Main() {
                         <a href={galleryEight}><img src={galleryEight} alt="" title=""/></a>
                         </div>
                     </SRLWrapper>
+                    <video controls>
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
             </div>
             {/* <div class="section__col-3">
