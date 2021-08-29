@@ -191,7 +191,7 @@ function Main() {
             </div>
         </div>
         <div class="footer">
-            Copyright <strong>©</strong> 2021. Made by northweb.lt<br />
+            Copyright <strong>©</strong> 2021. Made by <a href="https://northweb.lt">northweb.lt</a><br />
             <div class='tags'>All rights reserved.</div>
         </div>
         </div>

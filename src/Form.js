@@ -94,7 +94,7 @@ function Form() {
     return (
         <form>
             <div class="info-box">
-                <a href="tel:+37063631839">
+                <a href="tel:93944733">
                     <div class="info-box__item">
                         <img alt="" src={phone} width="20px" />
                         <div class="text">
