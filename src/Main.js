@@ -22,6 +22,12 @@ import gallerySix from './images/gallery6.jpg';
 import gallerySeven from './images/gallery7.jpg';
 import galleryEight from './images/gallery8.jpg';
 import video from './images/video.mp4';
+import video2 from './images/video2.mp4';
+import galleryNine from './images/gallery9.jpg';
+import galleryTen from './images/gallery10.jpg';
+import galleryEleven from './images/gallery11.jpg';
+import galleryTwelve from './images/gallery12.jpg';
+import galleryThirteen from './images/gallery13.jpg';
 // import partners from './images/partners.jpg';
 
 function Main() {
@@ -124,10 +130,18 @@ function Main() {
                         <a href={gallerySix}><img src={gallerySix} alt="" title=""/></a>
                         <a href={gallerySeven}><img src={gallerySeven} alt="" title=""/></a>
                         <a href={galleryEight}><img src={galleryEight} alt="" title=""/></a>
+                        <a href={galleryNine}><img src={galleryNine} alt="" title=""/></a>
+                        <a href={galleryTen}><img src={galleryTen} alt="" title=""/></a>
+                        <a href={galleryEleven}><img src={galleryEleven} alt="" title=""/></a>
+                        <a href={galleryTwelve}><img src={galleryTwelve} alt="" title=""/></a>
+                        <a href={galleryThirteen}><img src={galleryThirteen} alt="" title=""/></a>
                         </div>
                     </SRLWrapper>
                     <video controls>
                         <source src={video} type="video/mp4" />
+                    </video>
+                    <video controls style={{ width: '100%'}}>
+                        <source src={video2} type="video/mp4" />
                     </video>
                 </div>
             </div>
